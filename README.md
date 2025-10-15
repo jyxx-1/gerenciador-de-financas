@@ -38,7 +38,7 @@ Siga os passos abaixo para executar o projeto em sua máquina local.
 
 1. Clone o Repositório
 
-git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+git clone [https://github.com/jyxx-1/gerenciador-de-financas.git](https://github.com/jyxx-1/gerenciador-de-financas.git)
 cd nome-do-repositorio
 
 
