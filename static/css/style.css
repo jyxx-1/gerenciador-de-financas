@@ -1,0 +1,162 @@
+/* --- Configurações Globais e Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0B0724; /* Nosso Azul Escuro da Noite */
+    color: #f0f0f0; /* Um branco suave para o texto */
+    line-height: 1.6;
+}
+
+/* --- Layout Principal --- */
+.container {
+    max-width: 800px;
+    margin: 2rem auto; /* 2rem de espaço em cima/baixo, centralizado dos lados */
+    padding: 1rem;
+}
+
+header h1 {
+    color: #492C7F; /* Roxo Majestoso */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #492C7F;
+    border-bottom: 2px solid #492C7F;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #492C7F;
+    margin: 2rem 0;
+}
+
+/* --- Estilo do Formulário --- */
+#add-transaction-form {
+    display: flex;
+    gap: 10px; /* Espaço entre os itens do formulário */
+    margin-bottom: 1rem;
+}
+
+#add-transaction-form input {
+    flex: 1; /* Faz os inputs ocuparem o espaço disponível */
+    padding: 10px;
+    border: 1px solid #492C7F;
+    border-radius: 5px;
+    background-color: #1a1a3d;
+    color: #f0f0f0;
+}
+
+#add-transaction-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ED47B2; /* Rosa Vibrante */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-transaction-form button:hover {
+    background-color: #c83da0;
+}
+
+/* --- Estilo da Lista de Transações --- */
+#transaction-list {
+    list-style-type: none; /* Remove as bolinhas da lista */
+}
+
+#transaction-list li {
+    background-color: #1a1a3d;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #ED47B2;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between; /* Alinha os itens com espaço entre eles */
+    align-items: center;
+}
+
+#transaction-list li > span:first-child {
+    /* O primeiro span (descrição) deve crescer para ocupar o espaço livre */
+    flex-grow: 1;
+    /* Evita que o texto quebre de forma estranha */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito grande */
+}
+
+#transaction-list li > span {
+    /* Garante que os outros spans não encolham */
+    flex-shrink: 0;
+}
+
+#transaction-list li .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Coloca a descrição em cima da data */
+}
+#transaction-list li .data {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+#transaction-list li .valor-e-acoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.acoes button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.edit-form {
+    display: flex;
+    flex-grow: 1;
+    gap: 5px;
+}
+
+.edit-form input {
+    padding: 5px;
+    border: 1px solid #492C7F;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    color: #0B0724;
+}
+
+.edit-form .edit-actions button {
+    padding: 5px 10px;
+}
+
+.edit-btn { transition: transform 0.2s; }
+.edit-btn:hover { transform: scale(1.2); color: #FFC107; } /* Amarelo no hover */
+
+.delete-btn { transition: transform 0.2s; }
+.delete-btn:hover { transform: scale(1.2); color: #dc3545; } /* Vermelho no hover */
+
+/* As classes que nosso JavaScript adiciona! */
+.valor {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.positivo {
+    color: #28a745; /* Verde para receitas */
+}
+.negativo {
+    color: #dc3545; /* Vermelho para despesas */
+}

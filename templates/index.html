@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Gestora de Finanças</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aurora - Sua Gestora de Finanças Pessoais</h1>
+        </header>
+
+        <main>
+            <section id="form-section">
+                <h2>Adicionar Nova Transação</h2>
+                <form id="add-transaction-form">
+                    <input type="text" id="descricao" placeholder="Descrição" required>
+                    <input type="number" id="valor" step="0.01" placeholder="Valor (ex: -50.25)" required>
+                    <input type="date" id="data" required>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </section>
+
+            <hr>
+
+            <section id="transactions-section">
+                <h2>Minhas Transações</h2>
+                <ul id="transaction-list">
+                    <li>Carregando transações...</li>
+                </ul>
+            </section>
+        </main>
+        </div>
+        
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+        </body>
+</html>
