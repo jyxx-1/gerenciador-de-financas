@@ -22,7 +22,7 @@ Aurora is a full-stack personal finance management web application, built from s
 
 ✅ Persistência de dados em um banco de dados SQLite.
 
-🛠️ Tecnologias Utilizadas (Tech Stack)
+# 🛠️ Tecnologias Utilizadas (Tech Stack)
 
 Back-end: Python, Flask
 
